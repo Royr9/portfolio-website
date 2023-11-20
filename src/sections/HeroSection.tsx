@@ -1,4 +1,5 @@
 //css 
+import GlowingFillButton from "../library/library_components/glowing_fill_button/GlowingFillButton";
 import "./hero.css";
 
 //imports
@@ -13,8 +14,10 @@ export default function HeroSection() {
         <h4>On a mission to create apps that will
           make the world a better place</h4>
           <div className="title-buttons">
-          <Button as="a" href="/media/Roy-CV.pdf" download={"Roy-CV.pdf"}>Download CV</Button>
-          <Button>View my work</Button>
+        
+          <GlowingFillButton Element="a">Download CV</GlowingFillButton>
+          <GlowingFillButton Element="button">View my work</GlowingFillButton>
+
           </div>
           
         </div>
