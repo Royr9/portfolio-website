@@ -1,0 +1,65 @@
+.drawer-navbar{
+    background-image: url("/public/media/images/navbar_stripes.png")!important;
+    background-repeat: no-repeat;
+    background-size: contain;
+   
+   
+
+}
+
+.navbar-toggler{
+    border: black 1px solid;
+    font-size: small;
+ 
+}
+
+@media screen and (max-width: 600px) {
+    .navbar-toggler {
+        position: relative;
+        bottom: 0.3vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navbar-toggler {
+            position: relative;
+                bottom: 5px;
+        }
+}
+
+
+.offcanvas{
+    background-color: rgb(81, 81, 81);
+    color: white;
+}
+
+.offcanvas .nav-link, .offcanvas-title{
+    color: white;
+    
+}
+
+.nav-link{
+    opacity: 0.7;
+    font-size: large;
+    padding: 3% 0;
+}
+
+.nav-link:hover{
+    opacity: 1;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .nav-link{
+        color: black!important;
+        padding: 8px;
+    }
+        .navbar-nav {
+            gap: 3%;
+        }
+
+}
+
+
+
