@@ -24,7 +24,7 @@ function AppNavbar() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-start flex-grow-1 pe-3 ">
-                  <Nav.Link href="#home">Home</Nav.Link>
+                  <Nav.Link href="#hero-section">Home</Nav.Link>
                   <Nav.Link href="#project">Projects</Nav.Link>
                   <Nav.Link href="#about">About</Nav.Link>
                   <Nav.Link href="#contact">Contact</Nav.Link>
