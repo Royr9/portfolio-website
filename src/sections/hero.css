@@ -23,7 +23,7 @@
     font-size: 1.5rem;
 }
 
-.title-buttons button,a{
+.title-buttons > button, .title-buttons a{
     margin: 1rem;
     margin-left: 0;
 }
