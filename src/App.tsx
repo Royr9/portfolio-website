@@ -2,20 +2,32 @@ import React from 'react';
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css"
 
-import { createBrowserRouter ,Route, createRoutesFromElements, RouterProvider } from "react-router-dom";
-import Home from './pages/Home';
-import Root from './pages/Root';
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path='/' element={<Root/>}>
-     <Route path='/' element={<Home/>}/>
-    </Route>
+
+import Footer from './library/library_components/footer_comp/Footer';
+import AppNavbar from './components/AppNavbar';
+import { Container } from 'react-bootstrap';
+import HeroSection from './sections/HeroSection';
+
+export default function App() {
+  return (
+    <div className='App'>
+<AppNavbar/>
+
+<Container className='main'>
+ <HeroSection/>
+
+</Container>
+
+
+    <Footer>
+        Made By Roy Ramati
+    </Footer>
+
+
+    </div>
   )
-)
-
-function App() {
-  return (  <RouterProvider router={router} /> );
 }
 
-export default App;
+
+
