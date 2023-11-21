@@ -53,10 +53,26 @@
 display: grid;
 grid-template-columns: 1fr 1fr;
 grid-template-rows: 1fr 1fr;
+gap: 1rem;
 }
-.projects-teaser img{
-    min-height: 300px;
-    min-width:  200px;
+
+.project-video{
+    position: relative;
+}
+
+.projects-teaser img, .projects-teaser video{
     height: 100%;
     width: 100%;
+    color: white;
+}
+
+
+
+ .play-pause-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    visibility: visible;
 }
