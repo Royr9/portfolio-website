@@ -15,7 +15,7 @@ export default function HeroSection() {
           make the world a better place</h4>
           <div className="title-buttons">
         
-          <GlowingFillButton Element="a">Download CV</GlowingFillButton>
+          <GlowingFillButton href="/media/Roy-CV.pdf" download="Roy-CV.pdf" Element="a">Download CV</GlowingFillButton>
           <GlowingFillButton Element="button">View my work</GlowingFillButton>
 
           </div>
