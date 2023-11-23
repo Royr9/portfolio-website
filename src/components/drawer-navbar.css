@@ -1,10 +1,14 @@
 .drawer-navbar{
-    background-image: url("/public/media/images/navbar_stripes.png")!important;
+    background-image: url("/public/media/images/navbar_stripes-blue.png")!important;
     background-repeat: no-repeat;
-    background-size: contain;
    
-   
+}
 
+@media screen and (max-width:767px) {
+    .drawer-navbar{
+background-size: contain;
+    }
+    
 }
 
 .navbar-toggler{
@@ -13,19 +17,7 @@
  
 }
 
-@media screen and (max-width: 600px) {
-    .navbar-toggler {
-        position: relative;
-        bottom: 0.3vw;
-    }
-}
 
-@media screen and (max-width: 500px) {
-    .navbar-toggler {
-            position: relative;
-                bottom: 5px;
-        }
-}
 
 
 .offcanvas{
