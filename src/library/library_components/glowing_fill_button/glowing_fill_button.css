@@ -1,7 +1,6 @@
+@import "../../../css/variables.css";
 
-:root{
-    --button-color: #db8d34
-}
+
 
 .glow-btn {
     background-color: transparent;
@@ -10,9 +9,9 @@
     font-size: 16px;
     text-align: center;
     text-decoration: none;
-    border: 2px solid var(--button-color);
+    border: 2px solid var(--glowing-button-color);
     border-radius: 10px;
-    box-shadow: 0 0 10px 2px var(--button-color);
+    box-shadow: 0 0 10px 2px var(--glowing-button-color);
     cursor: pointer;
     color: #fff;
     transition: box-shadow 0.3s ease;
@@ -20,6 +19,6 @@
 }
 
 .glow-btn:hover:hover {
-    box-shadow: 0 0 20px 4px var(--button-color);
-    background-color: var(--button-color);
+    box-shadow: 0 0 20px 4px var(--glowing-button-color);
+    background-color: var(--glowing-button-color);
 }

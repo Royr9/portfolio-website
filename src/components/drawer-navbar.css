@@ -1,7 +1,10 @@
 .drawer-navbar{
     background-image: url("/public/media/images/navbar_stripes-blue.png")!important;
     background-repeat: no-repeat;
-   
+    width: 100%;
+    position: absolute;
+    top: 0;
+
 }
 
 @media screen and (max-width:767px) {

@@ -1,13 +1,7 @@
 :root {
-    --landing-page-bg: url("/public/media/landingBackground.png");
-    --website-background: url("/public/media/websiteBackground.png");
-    --mobile-background: url("/public/media/mobileBackground.png");
-    --navy-blue-background: url("/public/media/LpBg.png");
-    --redOrange-radiant: linear-gradient(to right, #ff3131, #ff914d);
-    --form-background: #8FA8C6;
-    --cubes-background: #5E7699;
-    --form-btn-background: #311354 ;
-
-    --fading-purple-gradient: linear-gradient(90deg ,#94438E, rgba(148, 67, 143, 0.119));
-    --poppings-font: 'Poppins', sans-serif;
+    --navbar-image-color: #0393A3;
+    --secondary-background-color: #153243;
+    --glowing-button-color: #0393A3;
+    --profile-container-bg-color: #0F7784;
+    --heroSection-background: url("/public/media/images/hero-bg.png");
 }

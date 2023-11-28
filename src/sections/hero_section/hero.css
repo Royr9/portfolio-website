@@ -1,22 +1,27 @@
-/* Mobile */
-
-@media screen and (max-width: 995px) {
-    #hero-section{
-        grid-template-columns: 1fr!important;
-    }
-
-}
+@import url("../../css/variables.css");
 
 #hero-section{
-    display: grid;
-    margin: 8% 0;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    background-image: var(--heroSection-background);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
 }
 
+.hero-section-container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
 
 .hero-title{
-    text-align: left;
+    
+    text-align: center;
     color: white;
     display: flex;
     flex-direction: column;
@@ -24,27 +29,44 @@
 }
 
 /* typing animation align to left */
-.anm-typing-container{
-    text-align: left;
-    margin-left: 0;
-}
 
 .hero-title h1 {
-    font-size: 4rem;
+    font-size: 7rem;
 }
 
 
 .hero-title h2{
-    font-size: 3rem;
+    font-size: 4rem;
+    text-shadow: 0 0 10px white;
 }
 
 .hero-title h4{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 .title-buttons > button, .title-buttons a{
-    margin: 1rem 2rem;
-    margin-left: 0;
+    max-width: 40%;
+    margin: 2.5% 5%;
+    text-shadow: 0 0 20px white;
+   
+}
+
+
+/* mobile */
+@media screen and (max-width: 767px) {
+    .hero-title h1 {
+        font-size: 17vw;
+    }
+
+
+    .hero-title h2 {
+        font-size: 6vw;
+        text-shadow: 0 0 5px white;
+    }
+
+    .hero-title h4 {
+        font-size: 4vw;
+    }
 }
 
 /* .glow-btn{
@@ -56,7 +78,7 @@
 
 /* projects teaser block */
 
-.projects-teaser{
+/* .projects-teaser{
 display: grid;
 grid-template-columns: 1fr 1fr;
 grid-template-rows: 1fr 1fr;
@@ -78,5 +100,5 @@ gap: 1rem;
     color: white;
     object-fit: fill;
 }
-
+ */
 

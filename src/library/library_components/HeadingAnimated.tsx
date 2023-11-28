@@ -5,13 +5,14 @@ type HeadingPropsType = {
   children: string;
   className?: string | null;
   delay?: string;
+  
 };
 
 export default function HeadingAnimated({
   Element,
   children,
   className,
-  delay,
+  delay
 }: HeadingPropsType) {
 
 
