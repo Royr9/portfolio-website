@@ -1,24 +1,18 @@
 import React from 'react';
-import './App.css';
+
+import "./sass/index.scss"
 import "./library/library_css/animations.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 
+import HeroSection from './sections/HeroSection';
 
 
-import Footer from './library/library_components/footer_comp/Footer';
-import AppNavbar from './components/AppNavbar';
-
-import HeroSection from './sections/hero_section/HeroSection';
-
-import SkillsSection from './sections/SkillsSection';
-import AboutSection from './sections/about_section/AboutSection';
 
 export default function App() {
   return (
     <div className='App'>
+  
 <HeroSection/>
-<AboutSection/>
-<SkillsSection/>
 
 
 

@@ -12,8 +12,26 @@ code {
     monospace;
 }
 
-.root-layout{
-  background-color: black;
-  z-index: 1
-;
-}
+
+
+
+//variables and functions
+@import "variables";
+
+// base and layout 
+
+// colors
+
+
+// components(btn,card,navbar,etc...);
+
+// pages/sections
+@import "./sections/hero.scss";
+
+
+//utilities (margin, padding , opacity,etc ...)
+
+
+@import "../library/royal_sass";
+
+

@@ -1,7 +1,5 @@
-@import url("../../css/variables.css");
-
 #hero-section{
-    background-image: var(--heroSection-background);
+    background-image: $heroSection-background;
     background-repeat: no-repeat;
     background-size: cover;
     height: 90vh;
@@ -68,37 +66,3 @@
         font-size: 4vw;
     }
 }
-
-/* .glow-btn{
-    background-color: transparent;
-    border: 1px groove  orange;
-    border-radius: 10px;
-    box-shadow: 0 0px 2px rgb(255, 191, 0);
-} */
-
-/* projects teaser block */
-
-/* .projects-teaser{
-display: grid;
-grid-template-columns: 1fr 1fr;
-grid-template-rows: 1fr 1fr;
-gap: 1rem;
-}
-.projects-teaser img{
-    max-height: 100%;
-        max-width: 100%;
-
-    }
-
-.projects-teaser .project-video-container {
-
-}
-
-.projects-teaser video{
-    height: 100%;
-    width: 100%;
-    color: white;
-    object-fit: fill;
-}
- */
-

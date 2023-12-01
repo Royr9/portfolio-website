@@ -1,0 +1,101 @@
+@use "sass:math";
+
+$grid-columns: 12;
+
+$grid-base-gap: 10px;
+
+$grid-gaps: (
+  "0": $grid-base-gap * 0,
+  "1" : $grid-base-gap * 1,
+  "2" : $grid-base-gap * 2,
+  "3" : $grid-base-gap * 3,
+);
+
+$layout-values: flex-start, flex-end, center, space-between, space-around;
+
+// base layout classes
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+// grid gap classes
+@each $gap, $v in $grid-gaps {
+    .gap-#{$gap}{
+        > *{
+            padding: $v;
+        }
+        margin-left: -$v;
+        margin-right: -$v;
+    }
+}
+
+// justify content classes
+@each $v in $layout-values{
+    .justify-#{$v}{
+        justify-content: $v;
+    }
+    .align-#{$v}{
+        align-items: $v;
+    }
+}
+
+
+// col classes
+@include xs {
+    @for $i from 1 through $grid-columns {
+        .col-#{$i}-xs {
+            box-sizing: border-box;
+            flex-grow: 0;
+            width: math.div($i * 100%, $grid-columns);
+        }
+    }
+}
+
+@include sm {
+    @for $i from 1 through $grid-columns {
+        .col-#{$i}-sm {
+            box-sizing: border-box;
+            flex-grow: 0;
+            width: math.div($i * 100%, $grid-columns);
+        }
+    }
+}
+
+@include md {
+    @for $i from 1 through $grid-columns {
+        .col-#{$i}-md {
+            box-sizing: border-box;
+            flex-grow: 0;
+            width: math.div($i * 100%, $grid-columns);
+        }
+    }
+}
+
+@include lg {
+    @for $i from 1 through $grid-columns {
+        .col-#{$i}-lg {
+            box-sizing: border-box;
+            flex-grow: 0;
+            width: math.div($i * 100%, $grid-columns);
+        }
+    }
+}
+
+@include xl {
+    @for $i from 1 through $grid-columns {
+        .col-#{$i}-xl {
+            box-sizing: border-box;
+            flex-grow: 0;
+            width: math.div($i * 100%, $grid-columns);
+        }
+    }
+}

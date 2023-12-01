@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+  "*.scss": "scss"
+},
+"editor.suggestSelection": "first",
+"editor.tabCompletion": "on",
+"editor.quickSuggestions": {
+  "other": true,
+  "comments": false,
+  "strings": true
+},
+
+
+}
