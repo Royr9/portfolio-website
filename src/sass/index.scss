@@ -15,23 +15,29 @@ code {
 
 
 
+
 //variables and functions
 @import "variables";
 
 // base and layout 
+@import "base";
 
 // colors
 
 
 // components(btn,card,navbar,etc...);
+@import "./components/navbar-drawer";
+@import "./components/card-center";
 
 // pages/sections
 @import "./sections/hero.scss";
+@import "./sections/about.scss";
 
 
 //utilities (margin, padding , opacity,etc ...)
 
 
+// other libraries
 @import "../library/royal_sass";
 
 

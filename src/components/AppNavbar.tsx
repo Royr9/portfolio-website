@@ -3,8 +3,6 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import  Offcanvas  from 'react-bootstrap/Offcanvas';
 
-import "./drawer-navbar.css"
-
 
 function AppNavbar() {
   return (

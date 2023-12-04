@@ -2,7 +2,7 @@
     background-image: $heroSection-background;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,17 +52,12 @@
 
 /* mobile */
 @media screen and (max-width: 767px) {
-    .hero-title h1 {
-        font-size: 17vw;
-    }
+  
 
 
     .hero-title h2 {
-        font-size: 6vw;
+      
         text-shadow: 0 0 5px white;
     }
 
-    .hero-title h4 {
-        font-size: 4vw;
-    }
 }

@@ -1,0 +1,31 @@
+#about-section{
+    background: $linear-secondary;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .about-container{
+        display: grid;
+        grid-template-columns: 40% 60%;
+        // image-col
+        .image-col{
+        img{
+            height: 250px;
+        }
+         .card-body{
+        svg{
+        margin: auto 1rem;
+        }
+    }
+    }
+    // content-col
+    .content-col{
+        img{
+            margin: 0;
+        }
+    }
+    }
+    
+   
+}
+

@@ -1,0 +1,15 @@
+@import "../../library/royal_sass";
+
+.card-center{
+    @extend .card;
+    display: inline-block;
+    padding: 2rem;
+    text-align: center;
+    > *{
+        margin: 0.8rem auto;
+    }
+.img-circle{
+    border-radius: 50%;
+}
+
+}

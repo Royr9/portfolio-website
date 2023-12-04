@@ -1,5 +1,25 @@
+// theme colors 
+
+$primary: #0393A3;
+$secondary: #1368A6;
+$dark: #153243;
+
+// gradients
+$linear-secondary: linear-gradient(90deg,white, $secondary );  
+
+
+
+// font sizes
+$base-font-size: 1rem;
+$base-res-font-size: 1vw;
+
+
+
+
+
 
 $navbar-image-color: #0393A3;
+$navbar-image: url("../../../public/media/images/navbar_stripes-blue.png");
 $secondary-background-color: #153243;
 $glowing-button-color: #0393A3;
 $profile-container-bg-color: #0F7784;

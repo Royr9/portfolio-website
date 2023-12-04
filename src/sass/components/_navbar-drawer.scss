@@ -1,8 +1,8 @@
 .drawer-navbar{
-    background-image: url("/public/media/images/navbar_stripes-blue.png")!important;
+    background-image: $navbar-image;
     background-repeat: no-repeat;
     width: 100%;
-    position: absolute;
+    position: absolute!important;
     top: 0;
 
 }
@@ -24,14 +24,11 @@ background-size: contain;
 
 
 .offcanvas{
-    background-color: rgb(81, 81, 81);
-    color: white;
+    background-color: rgb(81, 81, 81)!important;
+    color: white!important;
 }
 
-.offcanvas .nav-link, .offcanvas-title{
-    color: white;
-    
-}
+
 
 .nav-link{
     opacity: 0.7;

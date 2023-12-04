@@ -1,6 +1,8 @@
-@import "../../../css/variables.css";
 
 
+:root{
+    --glowing-button-color: #0393A3;
+}
 
 .glow-btn {
     background-color: transparent;
