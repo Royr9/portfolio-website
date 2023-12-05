@@ -11,31 +11,18 @@ export default function App() {
   const section1Ref = useRef<HTMLElement | null>(null);
   const section2Ref = useRef<HTMLElement | null>(null);
 
-  useEffect(() => {
-    const handleScroll = (e: Event) => {
-      e.preventDefault(); // Prevent the default scrolling behavior
 
-      const delta = (e as WheelEvent).deltaY;
-
-      if (delta > 0 && section2Ref.current) {
-       window.scrollTo({ top: section2Ref.current.offsetTop, behavior: 'auto' });
-      } else if (delta < 0 && section1Ref.current && section2Ref.current) {
-        window.scrollTo({ top: section1Ref.current.offsetTop, behavior: 'auto' });
-      }
-    };
-
-    window.addEventListener('wheel', handleScroll, { passive: false });
-
-    return () => {
-      window.removeEventListener('wheel', handleScroll);
-    };
-  }, [section1Ref, section2Ref]);
 
   return (
-    <div className='App'>
-       <AppNavbar/>
-      <HeroSection ref={section1Ref} />
+    <div className='App' >
+    
+
+   
+      <AppNavbar/>
+      <HeroSection  ref={section1Ref} />
       <AboutSection ref={section2Ref} />
+   
+
     </div>
   );
 }

@@ -1,0 +1,11 @@
+
+html{
+    scroll-snap-type: y mandatory!important;
+}
+
+   section{
+        height: 100vh;
+        scroll-behavior: smooth;
+        scroll-snap-align: start;
+        border: black solid 1px;
+    }

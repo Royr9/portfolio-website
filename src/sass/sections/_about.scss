@@ -1,31 +1,41 @@
 #about-section{
     background: $linear-secondary;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     .about-container{
-        display: grid;
-        grid-template-columns: 40% 60%;
+        // display: grid;
+        // grid-template-columns: 40% 60%;
+        box-shadow: $base-box-shadow;
+       
+        > * {border: none; box-shadow: none;}
         // image-col
         .image-col{
+            
         img{
-            height: 250px;
+            height: 300px;
         }
          .card-body{
-        svg{
+        a{
         margin: auto 1rem;
+        color: black;
+        &:hover{color: rgb(75, 160, 188)}
+       
         }
     }
     }
     // content-col
     .content-col{
+        margin-top: 2rem;
         img{
             margin: 0;
         }
+        button{
+            font-size: larger;
+            min-width:fit-content;
+            width: 30%;
+        }
     }
     }
-    
-   
 }
 
