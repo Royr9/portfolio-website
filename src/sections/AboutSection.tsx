@@ -10,25 +10,29 @@ const AboutSection = React.forwardRef<HTMLElement>((props,ref) => {
     <section ref={ref}  id='about-section'>
       <Container className='about-container row'>
         {/* image column */}
-        <div className='image-col col-5-lg card-center'>
+        <div className='image-col col-5-md card-center'>
           <img className='img-circle' src="/media/images/Roy-img-z.png" alt="" />
           <h2 className='card-title'> Roy Ramati </h2>
           <div className='card-body'>
-            <a href=""><GitHubIcon fontSize='large' /></a>
-            <a href=""><LinkedInIcon fontSize='large' /></a>
+            <a href=""><GitHubIcon sx={{fontSize: 50}}  /></a>
+            <a href=""><LinkedInIcon sx={{fontSize: 50}}  /></a>
           </div>
         </div>
         {/* about content div */}
-        <div className=' content-col col-7-lg card-center'>
-          <h2>{"</About Me>"}</h2>
+        <div className=' content-col col-7-md card-center'>
+          <h2 className=''>{"<About Me>"}</h2>
           <img src="/media/images/blue-glow-divider.png" alt="" />
           <p className='fs-4'>as a lorem impsu  lorem impsu lorem impsu
           lorem impsu lorem impsu lorem impsu
           lorem impsu lorem impsu lorem impsu
           lorem impsu lorem impsu lorem impsu
           lorem impsu lorem impsu lorem impsu</p>
+          <div className='card-body mobile-only'>
+            <a href=""><GitHubIcon sx={{fontSize: 50}} fontSize='large' /></a>
+            <a href=""><LinkedInIcon sx={{fontSize: 50}} fontSize='large' /></a>
+          </div>
           <GlowingFillButton Element='button' colorClass='glow-btn-mint b-rad-2 text-black'>
-            Get in Touch
+            Get In Touch
           </GlowingFillButton>
         </div>
       </Container>
