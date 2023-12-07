@@ -28,12 +28,14 @@
 // components(btn,card,navbar,etc...);
 @import "./components/navbar-drawer";
 @import "./components/card-center";
+@import "./components/project-container";
 
 // pages/sections
 @import "app";
 @import "./sections/hero";
 @import "./sections/about";
 @import "./sections/skills";
+@import "./sections/projects";
 
 
 //utilities (margin, padding , opacity,etc ...)

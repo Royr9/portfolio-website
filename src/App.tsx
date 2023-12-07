@@ -7,6 +7,7 @@ import HeroSection from './sections/HeroSection';
 import AboutSection from './sections/AboutSection';
 import AppNavbar from './components/AppNavbar';
 import SkillsSection from './sections/SkillsSection';
+import ProjectsSection from './sections/ProjectsSection';
 
 export default function App() {
   const section1Ref = useRef<HTMLElement | null>(null);
@@ -23,6 +24,7 @@ export default function App() {
       <HeroSection  ref={section1Ref} />
       <AboutSection ref={section2Ref} />
       <SkillsSection/>
+      <ProjectsSection/>
    
 
     </div>

@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-import skills from "../skillList"
+import skills from "../db/skillList"
 
 export default function SkillsSection() {
 
