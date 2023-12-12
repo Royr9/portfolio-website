@@ -11,7 +11,7 @@ export default function ProjectsCarousel() {
 const projects = ["A", "B" , "C" , "D", "E"]
 const [visibleProjectsAmount, setVisibleProjectsAmount] = useState<number>({} as number);
 const [currentProjects, setCurrentProjects ] = useState<string[] >([] as string[]);
-const [currentProjectsCounter, setCurrentProjectsCounter] = useState<number  >({} as number);
+const [currentProjectsCounter, setCurrentProjectsCounter] = useState<number  >(0);
 
 // Refs
 const nextArrowRef = useRef<SVGSVGElement | null>(null);
@@ -34,8 +34,6 @@ const handleResize = ()=>{
   } else{
     setVisibleProjectsAmount(1);
   }
-  console.log("chnage");
-  
 
 }
 
@@ -56,9 +54,9 @@ useEffect(()=>{
 //   console.log("counter: " + currentProjectsCounter);
 // console.log("vis: " + visibleProjectsAmount);
 // console.log("projects-length: " + currentProjects.length);
+ 
 
 
-// reset counter
 if (currentProjectsCounter === projects.length + visibleProjectsAmount ) {
   setCurrentProjectsCounter(visibleProjectsAmount);
 }
