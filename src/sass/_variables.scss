@@ -8,16 +8,24 @@ $mint:  #86F8FC;
 // gradients
 $linear-secondary: linear-gradient(90deg,white, $secondary );  
 
+// font sizes
+$base-padding: 0.75rem !default;
+$base-margin: 0.75rem !default;
 
+// borders
+$base-border-thickness: 1px !default;
+$base-border-radius: 20px !default;
+
+// box-shadow
+$base-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1) !default;
 
 // font sizes
-$base-font-size: 1rem;
-$base-res-font-size: 1vw;
-
-
-
-
-
+$base-res-font-size:1vw;
+$base-font-size: 1rem !default;
+$font-size-sm: $base-font-size * 0.75 !default;
+$font-size-lg: $base-font-size * 1.5 !default;
+$font-size-xl: $base-font-size * 2 !default;
+$font-size-xxl: $base-font-size * 3 !default;
 
 $navbar-image-color: #0393A3;
 $navbar-image: url("../../../public/media/images/navbar_stripes-blue.png");

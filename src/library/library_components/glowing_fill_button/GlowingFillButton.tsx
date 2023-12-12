@@ -6,14 +6,16 @@ type ButtonPropsType = {
   href?: string;
   download? :string;
   colorClass?: string;
+  rel?: string;
+  target?: string;
 
 };
 
 
-export default function GlowingFillButton({Element, children,href,download,colorClass}: ButtonPropsType) {
+export default function GlowingFillButton({Element, children,href,download,colorClass,rel,target}: ButtonPropsType) {
 
   return (
-    <Element href={href} download={download}  className={`glow-btn ${colorClass}`}>
+    <Element target={target} rel={rel} href={href} download={download}  className={`glow-btn ${colorClass}`}>
         {children}
     </Element>
   )

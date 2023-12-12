@@ -8,9 +8,9 @@ import GlowingFillButton from '../library/library_components/glowing_fill_button
 const AboutSection = React.forwardRef<HTMLElement>((props,ref) => {
   return (
     <section ref={ref}  id='about-section'>
-      <Container className='about-container row'>
+      <Container fluid className='about-container royal-container row'>
         {/* image column */}
-        <div className='image-col col-5-md card-center'>
+        <div className='image-col col-md-5 card-center'>
           <img className='img-circle' src="/media/images/Roy-img-z.png" alt="" />
           <h2 className='card-title'> Roy Ramati </h2>
           <div className='card-body'>
@@ -19,9 +19,9 @@ const AboutSection = React.forwardRef<HTMLElement>((props,ref) => {
           </div>
         </div>
         {/* about content div */}
-        <div className=' content-col col-7-md card-center'>
+        <div className=' content-col col-md-7 card-center'>
           <h2 className=''>{"<About Me>"}</h2>
-          <img src="/media/images/blue-glow-divider.png" alt="" />
+          <img style={{maxWidth:"100%"}} src="/media/images/blue-glow-divider.png" alt="" />
           <p className='fs-4'>as a lorem impsu  lorem impsu lorem impsu
           lorem impsu lorem impsu lorem impsu
           lorem impsu lorem impsu lorem impsu

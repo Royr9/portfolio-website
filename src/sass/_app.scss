@@ -5,6 +5,7 @@ html{
 
    section{
         height: 100vh;
+        min-height: fit-content!important;
         scroll-behavior: smooth;
         scroll-snap-align: start;
         border: black solid 1px;
