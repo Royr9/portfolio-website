@@ -1,0 +1,151 @@
+/* carousel.scss */
+.roy-carousel{
+  overflow: hidden;
+}
+
+
+// next button slide next button slide next button slide next button slide
+
+// xs-sm
+@keyframes slide-next-out {
+0%{transform: translateX(0);}
+100%{transform: translateX(-70vw);  }
+}
+@keyframes slide-next-in {
+0%{transform: translateX(50vw);}
+100%{transform: translateX(0); }
+}
+@keyframes slide-left {
+  0%{transform: translateX(0);}
+  100%{transform: translateX(-26.33vw);}
+}
+
+// md
+@media (min-width:768px){
+
+@keyframes slide-next-out {
+0%{transform: translateX(0);}
+100%{transform: translateX(-50vw );  }
+}
+@keyframes slide-next-in {
+0%{transform: translateX(33vw);}
+100%{transform: translateX( 0); }
+}
+@keyframes slide-left {
+  0%{transform: translateX(0);}
+  100%{transform: translateX(-40vw);}
+}
+}
+
+
+// lg
+@media (min-width:968px){
+
+@keyframes slide-next-out {
+0%{transform: translateX(0);}
+100%{transform: translateX(-33vw );  }
+}
+@keyframes slide-next-in {
+0%{transform: translateX(20vw);}
+100%{transform: translateX(0); }
+}
+@keyframes slide-left {
+  0%{transform: translateX(0);}
+  100%{transform: translateX(-26.33vw);}
+}
+}
+
+
+.slideNextOut{
+  
+  animation: slide-next-out 0.3s ease-out ;
+  animation-fill-mode: forwards;
+}
+
+
+.slideNextIn{
+  animation: slide-next-in 0.3s ease-in ;
+  animation-fill-mode: forwards;
+}
+
+
+
+.slideLeft{
+    animation: slide-left 0.3s ease-in ;
+  animation-fill-mode: forwards;
+}
+
+
+
+
+// prev button slide: prev button slide: prev button slide: prev button slide: prev button slide: prev button slide: 
+
+
+
+// small and mobile screen
+@keyframes slide-prev-Out {
+0%{transform: translateX(0);}
+100%{transform: translateX(70vw); overflow: hidden; }
+}
+@keyframes slide-prev-in {
+0%{transform: translateX(-50vw);}
+100%{transform: translateX(0); }
+}
+@keyframes slide-right {
+  0%{transform: translateX(0);}
+  100%{transform: translateX(26.33vw);}
+}
+
+// md screen
+@media (min-width:768px) {
+  @keyframes slide-prev-Out {
+0%{transform: translateX(0);}
+100%{transform: translateX(50vw); overflow: hidden; }
+}
+@keyframes slide-prev-in {
+0%{transform: translateX(-33vw);}
+100%{transform: translateX(0); }
+}
+@keyframes slide-right {
+  0%{transform: translateX(0);}
+  100%{transform: translateX(40vw);}
+}
+}
+
+
+// large screen 
+@media (min-width:968px) {
+  @keyframes slide-prev-Out {
+0%{transform: translateX(0);}
+100%{transform: translateX(33vw); overflow: hidden; }
+}
+@keyframes slide-prev-in {
+0%{transform: translateX(-20vw);}
+100%{transform: translateX(0); }
+}
+@keyframes slide-right {
+  0%{transform: translateX(0);}
+  100%{transform: translateX(26.33vw);}
+}
+}
+
+
+
+.slidePrevOut{
+  
+  animation: slide-prev-Out 0.3s ease-out ;
+  animation-fill-mode: forwards;
+}
+
+
+.slidePrevIn{
+  animation: slide-prev-in 0.3s ease-in ;
+  animation-fill-mode: forwards;
+}
+
+
+
+.slideRight{
+    animation: slide-right 0.3s ease-in ;
+  animation-fill-mode: forwards;
+}

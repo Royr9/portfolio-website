@@ -1,5 +1,6 @@
 import { Container } from "react-bootstrap";
-import ProjectsCarousel from "../library/library_components/ProjectsCarousel";
+
+import Carousel from "../library/library_components/Carousel";
 
 
 // icons
@@ -12,7 +13,7 @@ export default function ProjectsSection() {
     <section id="ProjectsSection">
         <Container  fluid style={{height: "100%"}} >
           <h1 style={{height: "20%", margin: "0"}}>Projects</h1>
-         <ProjectsCarousel/>
+         <Carousel/>
          
 
          
