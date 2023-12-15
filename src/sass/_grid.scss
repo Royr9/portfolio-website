@@ -13,13 +13,14 @@ $breakpoints: (
     "md": 768px,
     "lg": 960px,
     "xl": 1200px,
+    "xxl": 1400px
 );
 
 @each $k,$v in $breakpoints{
     @media (min-width: #{$v}) {
-        .col-#{$k}-05{
+        .col-#{$k}-08{
             flex: 0 0 auto;
-            width: math.div(100%,24);
+            width: math.div(100%,15);
         }
     }
 }

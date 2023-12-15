@@ -109,8 +109,8 @@ const prevProject =  ()=>{
 
 
     return (
-          <div className="row gy-4 d-flex p-0  justify-content-center projects-container roy-carousel">
-            <  div  style={{zIndex: 1}} className="col-md-1 col-lg-05 col-2 p-0 d-flex justify-content-center   ">
+          <div className="row  d-flex gap-1 justify-content-center projects-container roy-carousel">
+            <  div  style={{zIndex: 1}} className="col-lg-08 col-1   p-0 d-flex justify-content-center   ">
                  <NavigateBeforeIcon onClick={prevProject}sx={{fontSize: 50, cursor: "pointer"}}/>
            </div>   
           
@@ -135,7 +135,7 @@ const prevProject =  ()=>{
             )
           })}
           
-          <div style={{zIndex: 1}} className="col-md-1 col-lg-05 col-2 p-0 d-flex justify-content-center ">
+          <div style={{zIndex: 1}} className=" col-lg-08 col-1 p-0 d-flex justify-content-center ">
               <NavigateNextIcon 
            
               onClick={nextProject}
