@@ -1,19 +1,21 @@
 
 .ProjectContainer{
-   height: 22vw;
-   max-height: 340px;
+   height: 24vw;
+   max-height: 350px;
    min-height: 250px;
+   max-width: 372px;
 
    margin: auto;
    box-sizing: border-box;
    border-radius: 5px;
+   border: none;
    display: flex!important;
    align-items: center; 
    justify-content: center;
    background-repeat: no-repeat!important;
-   background-size: cover!important;
+   background-size: contain!important;
  
-    .hover-content{display: none;  transition: 2s ease-in-out ;}
+    .hover-content{display: none;  }
    
     
    

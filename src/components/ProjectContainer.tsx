@@ -1,34 +1,43 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import GlowingFillButton from '../library/library_components/glowing_fill_button/GlowingFillButton';
 import { ProjectsObjectType } from '../db/projects';
 
 
+type ProjectContainerPropsType = {
+  project: ProjectsObjectType;
+}
 
-export default function ProjectContainer({...props} : ProjectsObjectType) {
 
-    const [currentBg, setCurrentBg] = useState<string>(props.image);
+
+export default function ProjectContainer({project}:ProjectContainerPropsType) {
+  
+    const [isHovered, toggleIsHovered] = useState(false);
+    const [currentBg, setCurrentBg] = useState<string>(project.image);
+
+    useEffect(()=>{
+      setCurrentBg(project.image);
+    },[project]);
 
   return (
-    <div  className='col '>
     <div
-    onMouseOver={()=> setCurrentBg(props.themeBackground)} 
-    onMouseOut={()=>setCurrentBg(props.image)}
-    style={{background: currentBg, transition: 'background 0.8s ease-in-out'}}
-     className='card-center ProjectContainer'>
+    style={{background: currentBg}}
+    onMouseOver={()=> {setCurrentBg(project.themeBackground); toggleIsHovered(true)}} 
+    onMouseOut={()=>{setCurrentBg(project.image); toggleIsHovered(false);}}
+    className={`card-center ProjectContainer w-100  p-0  position-relative  ${isHovered && "appear-smooth animate--fast" }`}>
         
-        {props.logo}
+        {project.logo}
         <div className='hover-content'>
-          <p>{props.description}</p>
+          <p>{project.description}</p>
           <div className='tech-used'>
-            {props.techUsed.map((tech)=>{
+            {project.techUsed.map((tech)=>{
                 return(
                     <span>{tech}</span>
                 )
             })}
           </div>
           <div className='buttons-div'>
-          <GlowingFillButton rel='noopener' target='_blank' Element='a' href={props.websiteLink}  colorClass='glow-btn-mint '>To Website</GlowingFillButton>
-          {props.githubLink &&   <GlowingFillButton rel='noopener' target='_blank' Element='a' href={ props.githubLink} colorClass='glow-btn-mint '>Git Repo</GlowingFillButton>
+          <GlowingFillButton rel='noopener' target='_blank' Element='a' href={project.websiteLink}  colorClass='glow-btn-mint '>To Website</GlowingFillButton>
+          {project.githubLink &&   <GlowingFillButton rel='noopener' target='_blank' Element='a' href={ project.githubLink} colorClass='glow-btn-mint '>Git Repo</GlowingFillButton>
 }
          
           </div>
@@ -37,6 +46,6 @@ export default function ProjectContainer({...props} : ProjectsObjectType) {
         
       
     </div>
-    </div>
+   
   )
 }

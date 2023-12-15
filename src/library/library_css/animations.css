@@ -91,7 +91,7 @@
     animation-name: appear;
 }
 
-@keyframes appearSmooth {
+@keyframes appear-fast {
     from {
         opacity: 0;
     }
@@ -101,9 +101,26 @@
     }
 }
 
+.appear-fast{
+    animation-name: appear-fast ;
+    animation-duration: 0.8;
+    animation-timing-function: ease-in;
+}
+
+
+@keyframes appearSmooth {
+    from {
+        opacity: 0.1;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 
 .appear-smooth {
-    animation-name: appear;
+    animation-name: appearSmooth;
     animation-duration: 1.5s;
     animation-timing-function: ease-in;
 }

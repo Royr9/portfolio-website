@@ -3,15 +3,22 @@ import "./carousel.scss";
 
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
+import ProjectContainer from "../../../components/ProjectContainer";
+import { ProjectsObjectType, projects } from "../../../db/projects";
+
+type CarouselPropsType = {
+    projects: []; 
+
+}
 
 export default function Carousel() {
 
-    const projects = ["1","2","3","4","5"];
+    
     const totalAmountOfProjects = projects.length;
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [numOfShownProjects,setNumOfShownProjects] = useState<number>({} as number);
-    const [visibleProjects, setVisibleProjects]= useState([] as string[]);
+    const [visibleProjects, setVisibleProjects]= useState([] as ProjectsObjectType[]);
     // next animation states
     const [nextOutAnimation, toggleNextOutAnimation] = useState(false);
     const [nextInAnimation, toggleNextInAnimation] = useState(false);
@@ -103,7 +110,7 @@ const prevProject =  ()=>{
 
     return (
           <div className="row gy-4 d-flex justify-content-center projects-container roy-carousel">
-            <  div  className="col-md-1 col-2  justify-content-center ">
+            <  div  style={{zIndex: 1}} className="col-md-1 col-2  justify-content-center ">
                  <NavigateBeforeIcon onClick={prevProject}sx={{fontSize: 50, cursor: "pointer"}}/>
            </div>   
           
@@ -111,23 +118,24 @@ const prevProject =  ()=>{
            
             return(
                 <div key={index} 
-                 className={`col active-project  
+                 className={`col  
                    ${ prevOutAnimation  ? index === numOfShownProjects - 1 ? "slidePrevOut" : "slideRight" : ""}
                    ${index === 0 &&  prevInAnimation && "slidePrevIn"}
                     ${ nextOutAnimation  ? index === 0 ? "slideNextOut" : "slideLeft" : ""}
                    ${index === numOfShownProjects - 1 &&  nextInAnimation && "slideNextIn"}
                    `
-                   
                     } > 
-                    <div className="card-center ProjectContainer "> 
+                    {/* return default container or your own custom */}
+                    {/* <div className="carousel-card-center carousel-project-container "> 
                         <h1 >{project}</h1>
-                    </div>
+                    </div> */}
+                    <ProjectContainer project={project} />
                     
                 </div>
             )
           })}
           
-          <div className="col-md-1 col-2 ">
+          <div style={{zIndex: 1}} className="col-md-1 col-2 ">
               <NavigateNextIcon 
            
               onClick={nextProject}

@@ -18,9 +18,9 @@ export type ProjectsObjectType = {
 export const projects: ProjectsObjectType[] = [
   {
     name: "Aguamar-store",
-    logo: <h4 className="app-logo">Aguamar-store-demo</h4>, 
+    logo: <h2 className="app-logo">Aguamaril-Store Demo</h2>, 
     description: "A demo codded version of aguamaril.com created with React router",
-    image: "url('/media/images/aguamar-store.png')",
+    image: "url('/media/images/aguamar-stdore.png')",
     themeBackground: "#5E7699", // Example background color
     techUsed: ["React", "react-router"], // Example tech useded
     websiteLink: "https://aguamaril.onrender.com/",
@@ -38,9 +38,9 @@ export const projects: ProjectsObjectType[] = [
   },
   {
     name: "aguamaril.com",
-    logo: <img  className="app-logo" style={{height: "200px", opacity: "0.8"}} src="/media/images/Aguamar-logo.jpg" alt="" />, 
+    logo: <img  className="app-logo w-100 h-100 " style={{objectFit: "contain"}} src="/media/images/Aguamar-logo.jpg" alt="" />, 
     description: "Swimsuits E-commerce website. Created and managed by me using wix.  ",
-    image: "url('/media/images/aguamaril.com.png')",
+    image: "white",
     themeBackground: "#5E7699", 
     techUsed: ["Wix","Web-Design"], 
     websiteLink: "https://www.aguamaril.com/",
@@ -48,16 +48,20 @@ export const projects: ProjectsObjectType[] = [
   },
   {
     name: "My Tummy",
-    logo: <h3 style={{color: "white"}} className="app-logo">My Tummy</h3>, 
+    logo: <img   />, 
     description: "Nutrition tracking with smart health analysis that fit to your belly",
-    image: "url('/media/images/coming-soon.png')",
+    image: "url('/media/images/MyTummy.png')",
     themeBackground: "#5E7699", 
     techUsed: ["Next.js","Node.js", "Postgresql"], 
-    
-    
+  },
+  {
+    name: "My Recipe Book",
+    logo: <p></p>, 
+    description: "Create your own custom recipe books with dynamic filters and modification and share it with your friends!",
+    image: "url('/media/images/MyRecipeBook.png')",
+    themeBackground: "#5E7699", 
+    techUsed: ["Next.js","Node.js", "Postgresql"], 
   }
-
-
 ];
 
 
