@@ -7,10 +7,12 @@ import React, { forwardRef } from "react";
 
 
 
+
  const HeroSection = forwardRef<HTMLElement>(({},ref) => {
 
   return (
       <section ref={ref}  id='hero-section'>
+        <img className="bg-image" src="/media/images/title-bg.png" alt="" />
        
    <Container fluid className="hero-section-container">
 

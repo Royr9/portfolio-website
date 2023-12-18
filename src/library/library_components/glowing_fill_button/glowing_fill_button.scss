@@ -5,7 +5,7 @@ $btn-colors: (
     "mint": #86F8FC
 );
 
-@mixin glow-btn($color: #0393A3){
+@mixin glow-btn($color:#86F8FC){
     background-color: transparent;
     display: inline-block;
     padding: 10px 20px;
@@ -25,16 +25,38 @@ $btn-colors: (
         background-color: $color;
     }
 };
+@mixin glow-btn-filled($color: #86F8FC){
+    background-color: transparent;
+    display: inline-block;
+    padding: 10px 20px;
+     box-sizing: border-box;
+    white-space: nowrap;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: $color;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 4px $color;
+    cursor:default;
+    color:#000000;
+    transition: box-shadow 0.3s ease;
+};
 
 .glow-btn{
     @include glow-btn;
 }
 
+.glow-btn-filled{
+    @include glow-btn-filled()
+}
+ 
+
+
 @each $key, $value in $btn-colors{
     .glow-btn-#{$key}{
      @include glow-btn($value);
     };
-    };
+}
     
 
 

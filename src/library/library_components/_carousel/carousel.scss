@@ -88,10 +88,10 @@ $font-size-xl: $base-font-size * 2 !default;
 // xs-sm
 @keyframes slide-next-out {
 0%{transform: translateX(0);}
-100%{transform: translateX(-70vw);  }
+100%{transform: translateX(-100vw);  }
 }
 @keyframes slide-next-in {
-0%{transform: translateX(50vw);}
+0%{transform: translateX(100vw);}
 100%{transform: translateX(0); }
 }
 @keyframes slide-left {
@@ -107,7 +107,7 @@ $font-size-xl: $base-font-size * 2 !default;
 100%{transform: translateX(-50vw );  }
 }
 @keyframes slide-next-in {
-0%{transform: translateX(33vw);}
+0%{transform: translateX(50vw);}
 100%{transform: translateX( 0); }
 }
 @keyframes slide-left {
@@ -125,7 +125,7 @@ $font-size-xl: $base-font-size * 2 !default;
 100%{transform: translateX(-33vw );  }
 }
 @keyframes slide-next-in {
-0%{transform: translateX(20vw);}
+0%{transform: translateX(33vw);}
 100%{transform: translateX(0); }
 }
 @keyframes slide-left {
@@ -147,7 +147,13 @@ $font-size-xl: $base-font-size * 2 !default;
   animation-fill-mode: forwards;
 }
 
+@media (max-width:767px) {
+ .slideNextIn{
+  animation: slide-next-in 0.3s ease-in ;
+  animation-fill-mode: forwards;
+}
 
+}
 
 .slideLeft{
     animation: slide-left 0.3s ease-in ;
@@ -164,10 +170,10 @@ $font-size-xl: $base-font-size * 2 !default;
 // small and mobile screen
 @keyframes slide-prev-Out {
 0%{transform: translateX(0);}
-100%{transform: translateX(70vw); overflow: hidden; }
+100%{transform: translateX(100vw); overflow: hidden; }
 }
 @keyframes slide-prev-in {
-0%{transform: translateX(-50vw);}
+0%{transform: translateX(-100vw);}
 100%{transform: translateX(0); }
 }
 @keyframes slide-right {
@@ -182,7 +188,7 @@ $font-size-xl: $base-font-size * 2 !default;
 100%{transform: translateX(50vw); overflow: hidden; }
 }
 @keyframes slide-prev-in {
-0%{transform: translateX(-33vw);}
+0%{transform: translateX(-50vw);}
 100%{transform: translateX(0); }
 }
 @keyframes slide-right {
@@ -199,7 +205,7 @@ $font-size-xl: $base-font-size * 2 !default;
 100%{transform: translateX(33vw); overflow: hidden; }
 }
 @keyframes slide-prev-in {
-0%{transform: translateX(-20vw);}
+0%{transform: translateX(-33vw);}
 100%{transform: translateX(0); }
 }
 @keyframes slide-right {

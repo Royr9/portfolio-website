@@ -5,6 +5,7 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import ProjectContainer from "../../../components/ProjectContainer";
 import { ProjectsObjectType, projects } from "../../../db/projects";
+import NewProjectContainer from "../../../components/NewProjectContainer";
 
 type CarouselPropsType = {
     projects: []; 
@@ -34,7 +35,8 @@ export default function Carousel() {
         const handleResize = ()=>{
             const viewportWidth = window.innerWidth;
             const breakPoints = {
-                lg: 960,
+                
+                lg: 1050,
                 md: 768
             }
             if (viewportWidth > breakPoints.lg) {
@@ -129,7 +131,7 @@ const prevProject =  ()=>{
                     {/* <div className="carousel-card-center carousel-project-container "> 
                         <h1 >{project}</h1>
                     </div> */}
-                    <ProjectContainer project={project} />
+                    <NewProjectContainer project={project} />
                     
                 </div>
             )
