@@ -16,7 +16,23 @@ $breakpoints: (
     "xxl": 1400px
 );
 
+
+@mixin media-min($size){
+    @media (min-width: map-get($breakpoints, $size)) {
+        @content;
+    }
+}
+@mixin media-max($size){
+    @media (max-width: map-get($breakpoints, $size)) {
+        @content;
+    }
+}
+
+
+
+
 @each $k,$v in $breakpoints{
+    
     @media (min-width: #{$v}) {
         .col-#{$k}-08{
             flex: 0 0 auto;
@@ -25,4 +41,3 @@ $breakpoints: (
     }
 }
 
-@debug $breakpoints;

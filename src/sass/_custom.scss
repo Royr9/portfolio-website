@@ -1,0 +1,12 @@
+
+// font sizes / Headers 
+
+.section-heading{
+    font-size: $base-font-size * 5;
+   @include media-min("sm"){
+        font-size: $base-font-size * 6;
+    }
+    @include media-min("md"){
+         font-size: $base-font-size * 7;
+    }
+}

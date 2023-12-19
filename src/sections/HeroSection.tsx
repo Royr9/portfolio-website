@@ -17,10 +17,10 @@ import React, { forwardRef } from "react";
    <Container fluid className="hero-section-container">
 
         <div className='hero-title'>
-          <h1><span className="appear-smooth animate--fillBackwards">I</span> <span className="appear-smooth animate--delay1s animate--fillBackwards">AM</span>
+          <h1 ><span className="appear-smooth animate--fillBackwards">I</span> <span className="appear-smooth animate--delay1s animate--fillBackwards">AM</span>
            <span className="appear-smooth animate--delay2s animate--fillBackwards"> ROY</span> </h1>
           <HeadingTypeErase firstText="A Full-Stack Web Developer" secondText="An Entrepreneur"  Element="h2"/>
-        <h4 className="text-gray-500">On a mission to create apps impsum lorem impsum lorem   impsum lorem</h4>
+        <h4 className="opacity-75 ">On a mission to create apps impsum lorem impsum lorem   impsum lorem</h4>
           <div className="title-buttons">
           
           <GlowingFillButton href="/media/Roy-CV.pdf" download="Roy-CV.pdf" Element="a">Download CV</GlowingFillButton>

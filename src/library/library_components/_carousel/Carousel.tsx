@@ -3,9 +3,8 @@ import "./carousel.scss";
 
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
-import ProjectContainer from "../../../components/ProjectContainer";
 import { ProjectsObjectType, projects } from "../../../db/projects";
-import NewProjectContainer from "../../../components/NewProjectContainer";
+import ProjectContainer from "../../../components/ProjectContainer";
 
 type CarouselPropsType = {
     projects: []; 
@@ -131,7 +130,7 @@ const prevProject =  ()=>{
                     {/* <div className="carousel-card-center carousel-project-container "> 
                         <h1 >{project}</h1>
                     </div> */}
-                    <NewProjectContainer project={project} />
+                    <ProjectContainer project={project} />
                     
                 </div>
             )

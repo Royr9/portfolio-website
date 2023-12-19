@@ -18,22 +18,31 @@
      
       box-shadow: none;
       .skill-div{
-        margin: 2.5% auto;
+        margin: 2% auto;
+        width: 70%;
         position: relative;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-
         gap: 5%;
         margin-left: 0; 
-      
         img{height: 65px; width: 65px;}
+        span{width: 30%; text-align: left;}
       }  
-      @media (max-width: 767px) {
+      @media (max-width: 768px){
         .skill-div{
-          margin: 7% auto;
-          img{height: 6vw; width: 6vw;}
+           margin: 2% auto;
+          img{height: 55px; width:55px;}
+          span{font-size: small;}
         }
       }
+      @media (max-width: 576px) {
+        .skill-div{
+          margin: 15% auto;
+          img{height: 6vw; width: 6vw;}
+          span{font-size: smaller;}
+        }
+      }
+      
     }
 }

@@ -20,8 +20,9 @@
 @import "variables";
 
 // base and layout 
-@import "base";
 @import "grid";
+@import "base";
+
 
 // colors
 
@@ -40,6 +41,7 @@
 
 
 //utilities (margin, padding , opacity,etc ...)
+@import "./custom";
 
 
 // other libraries
