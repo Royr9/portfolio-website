@@ -1,5 +1,6 @@
 import { Container } from "react-bootstrap";
 import skills from "../db/skillList"
+import SkillsGame from "../components/SkillsGame";
 
 export default function SkillsSection() {
 
@@ -10,7 +11,8 @@ const skillsList = skills();
     <section id="skills-section">
         <h2 className="section-heading">My Skills</h2>
         <Container fluid className="skills-container card-center royal-container ">
-            {skillsList.map((skill,index)=> {
+          <SkillsGame/>
+            {/* {skillsList.map((skill,index)=> {
                 return (
                     <div className={` col-4  skill-${index}`} key={index}>
                       <div className="skill-div">
@@ -19,7 +21,7 @@ const skillsList = skills();
                         
                     </div>
                 )
-            })}
+            })} */}
          </Container>
     </section>
   )

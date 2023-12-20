@@ -8,7 +8,7 @@ type ProjectContainerPropsType = {
 
 export default function ProjectContainer({project}:ProjectContainerPropsType) {
 const [isHovered, toggleIsHovered] = useState(false);
-console.log("alalala");
+
 
     const returnButtons = ()=>{
       if (project.isComingSoon) {

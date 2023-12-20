@@ -57,8 +57,7 @@ export default function Carousel() {
 useEffect(()=>{
     const upLimit = currentIndex + numOfShownProjects;
     let updatedArray = [];
-    console.log(currentIndex);
-    console.log(upLimit);
+ 
     if (upLimit > totalAmountOfProjects) {
         let arr1 = projects.slice(currentIndex, upLimit);
         let arr2 = projects.slice(0, upLimit - totalAmountOfProjects);
