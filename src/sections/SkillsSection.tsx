@@ -9,10 +9,10 @@ const skillsList = skills();
 
   return (
     <section id="skills-section">
-        <h2 className="section-heading">My Skills</h2>
+        {/* <h2 className="section-heading">My Skills</h2>
         <Container fluid className="skills-container card-center royal-container ">
-          <SkillsGame/>
-            {/* {skillsList.map((skill,index)=> {
+         
+            {skillsList.map((skill,index)=> {
                 return (
                     <div className={` col-4  skill-${index}`} key={index}>
                       <div className="skill-div">
@@ -21,8 +21,9 @@ const skillsList = skills();
                         
                     </div>
                 )
-            })} */}
-         </Container>
+            })}
+         </Container> */}
+          <SkillsGame/>
     </section>
   )
 }

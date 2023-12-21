@@ -1,16 +1,21 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Button } from 'react-bootstrap';
 import GameCard from './GameCard';
+import {cardGameSkills, skillsArrayType} from '../db/skillList';
+
 
 export default function SkillsGame() {
-   const shuffleArray = (array: string[])=>{
+   const shuffleArray = (array: skillsArrayType)=>{
         const compareFn = ()=> Math.random() - 0.5;
         array.sort(compareFn);
         return array;
     }
 
-    const [cards, setCards] = useState(["1","1","2","2","3", "3", "4", "4", "5", "5","6","6"]);
-
+    // const [cards, setCards] = useState(["1","1","2","2","3", "3", "4", "4", "5", "5","6","6"]);
+    
+    const [cards, setCards] = useState(cardGameSkills())
+    
+    
    
 // states 
 
@@ -107,14 +112,15 @@ useEffect(() => {
       <div className='cards-container row gx-2 gy-2 '>
         {cards.map((card,index)=>{
             return(
-             <GameCard onCardClick={()=> handleCardClick(card)}
+             <GameCard onCardClick={()=> handleCardClick(card.name)}
               key={index}
               index={index} 
-              card={card} 
-              matchFound={matchedCards.includes(card)}
+              cardName={card.name} 
+              cardIconUrl= {card.iconUrl}
+              matchFound={matchedCards.includes(card.name)}
               isNoMatch= {isNoMatch.length === 2}
               isGamePlayed={isGamePlayed}
-              notMatch={isNoMatch.includes(card)}/>
+              notMatch={isNoMatch.includes(card.name)}/>
             )
         })}
       </div>
