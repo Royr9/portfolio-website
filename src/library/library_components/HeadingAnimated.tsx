@@ -20,7 +20,7 @@ export default function HeadingAnimated({
     <div
       className={`anm-typing-container  ${className}`}
     >
-      <Element className={`anm-typing ${delay}`}>{children}</Element>
+      <Element className={`anm-typing ${className} ${delay}`}>{children}</Element>
     </div>
   );
 }

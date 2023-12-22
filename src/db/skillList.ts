@@ -1,4 +1,21 @@
-const skillNames= ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Bootstrap", "Sass","Tailwind", "jQuery","Node.js" ,"MongoDB", "Git", "GitHub", "Rest API",  "ICP"]; 
+
+
+
+ export const shuffleObjectArray = (array: skillsArrayType  )=>{
+        const compareFn = ()=> Math.random() - 0.5;
+        array.sort(compareFn);
+        return array;
+    } 
+    export const shuffleStringArray = (array: string[] )=>{
+        const compareFn = ()=> Math.random() - 0.5;
+        array.sort(compareFn);
+        return array;
+    } 
+
+
+
+export const skillNames= ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Bootstrap", "Sass","Tailwind", "jQuery","Node.js" ,"MongoDB", "Git", "GitHub", "Rest API",  "ICP"]; 
+
 
 
 export type skillsArrayType = skillObjectType[];
@@ -7,25 +24,26 @@ type skillObjectType = {
     name: string,
     iconUrl: string
 }
+
+
 const skills = ()=>{
-
-
-let skillList: skillsArrayType = [];
+let skillsList: skillsArrayType = [];
 
 skillNames.forEach((skill)=>{
-    skillList.push({
+    skillsList.push({
         name: skill,
         iconUrl: `/media/images/skill-icons/${skill}.png`
     }) 
 });
 
-return skillList;
+return skillsList;
 }
 
-export const cardGameSkills = ()=>{
+ export const cardGameSkills = ()=>{
     let skillList: skillsArrayType = [];
-
-skillNames.forEach((skill)=>{
+    const gameSkillNames = skillNames;
+shuffleStringArray(gameSkillNames);
+gameSkillNames.slice(0,12).forEach((skill)=>{
     skillList.push({
         name: skill,
         iconUrl: `/media/images/skill-icons/${skill}.png`
@@ -34,7 +52,7 @@ skillNames.forEach((skill)=>{
         iconUrl: `/media/images/skill-icons/${skill}.png`
     } ) 
 });
-
+shuffleObjectArray(skillList);
 return skillList;
 }
 

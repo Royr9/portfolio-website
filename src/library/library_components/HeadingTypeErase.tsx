@@ -37,9 +37,9 @@ export default function HeadingTypeErase({
     }, [currentText])
 
   return (
-    <div
+    <div 
       className={`anm-typing-container  ${extraClasses}`}>
-      <Element className={`${currentAnimation} animate--slower`}>
+      <Element className={`${currentAnimation} ${extraClasses}  animate--slower`}>
         {currentText}
       </Element>
     </div>

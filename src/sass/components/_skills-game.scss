@@ -1,0 +1,61 @@
+.game-container{
+    h4{}
+    span{
+    margin: 0;
+    padding: 0;
+    p,div{margin: 0; padding: 0; }}
+    .cards-container{
+        @include media-min("xl"){
+              max-width: 80%;
+        }
+        div{
+         .game-card{
+                height: 14vw;
+                max-height: 8vh;
+                min-height: 40px!important;
+                width: 90%;
+                
+                @include media-min("md"){
+                    max-height: 11vh;
+                   
+                }
+                @include media-min("lg"){
+                    max-height: 13vh;
+                   
+                }
+                @include media-min("xxl"){
+
+                    
+                    width: 80%;
+                } 
+                // flip animation:
+                transform: rotateY(180deg);
+            
+                perspective: 1000px;
+                transition: background-color 0.7s, transform 0.7s;
+                transform-style: preserve-3d;
+                img{transition: opacity 0.8s;}
+                img.skill-icon{ visibility: hidden; opacity: 0; }
+                img.visible{visibility: visible; opacity: 1; }
+            }
+            .flipped{
+                    transform: rotateY(0deg);
+                    background-color: #f0f8ff;
+                } 
+            .flipped.no-match{
+                        animation-name: flash-border;
+                        animation-duration: 0.6s;
+                        animation-delay: 0.2s;
+                        animation-fill-mode: forwards;
+                    } 
+        }
+    }
+
+}
+
+
+@keyframes flash-border {
+    0%,20%,40%,60%,80%,90%{border-color: white;}
+    10%,30%,50%,70%,100%{border-color: red;}
+    
+}

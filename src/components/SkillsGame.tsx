@@ -1,48 +1,43 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Button } from 'react-bootstrap';
+import { Button, ButtonGroup, Container } from 'react-bootstrap';
 import GameCard from './GameCard';
-import {cardGameSkills, skillsArrayType} from '../db/skillList';
+import { cardGameSkills, skillsArrayType} from '../db/skillList';
+import HeadingTypeErase from '../library/library_components/HeadingTypeErase';
+import HeadingAnimated from '../library/library_components/HeadingAnimated';
 
 
-export default function SkillsGame() {
-   const shuffleArray = (array: skillsArrayType)=>{
-        const compareFn = ()=> Math.random() - 0.5;
-        array.sort(compareFn);
-        return array;
-    }
 
-    // const [cards, setCards] = useState(["1","1","2","2","3", "3", "4", "4", "5", "5","6","6"]);
-    
-    const [cards, setCards] = useState(cardGameSkills())
-    
-    
-   
+export default function SkillsGame({...props}) {
+  
+
+
 // states 
 
+const [cards, setCards] = useState<skillsArrayType  >(cardGameSkills());
+
 const [isGamePlayed, setIsGamePlayed] = useState(false);
-const [counter, setCounter] = useState(0);
+// const [counter, setCounter] = useState(0);
 
 
 const [selectedCards, setSelectedCards] = useState<string[]>([]);
 const [matchedCards, setMatchedCards] = useState<string[]>([]);
 const [isNoMatch, setIsNoMatch] = useState<string[]>([]);
 const [isGameWon, setIsGameWon] = useState(false);
-
-const counterInterval = useRef<NodeJS.Timer | null>(null);
+const [isRestarting, setIsRestarting] = useState(false);
+const [intro, setIntro] = useState(true);
 
 // play the game function
  function playGame() {
-  setIsGameWon(false);
-      setCards(shuffleArray(cards));
-   setCounter(1);
-     counterInterval.current = setInterval(()=>{
-            setCounter(prevValue => prevValue > 0 ? prevValue - 1 : 0);
-          }, 1000);
+      setIsRestarting(true);
+      setIntro(false);
+      setTimeout(() => {
+      setIsGameWon(false);
+      setCards(cardGameSkills());
+      setIsGamePlayed(true);
+      setIsRestarting(false);
+      }, 1700);
       
-          setTimeout(() => {
-            setIsGamePlayed(true);
       
-          }, counter * 1000);
     }
 
 
@@ -64,7 +59,7 @@ useEffect(()=>{
         setIsNoMatch([selectedCards[0], selectedCards[1]]);
         setTimeout(() => {
           setIsNoMatch([]);
-        }, 1000);
+        }, 1200);
       }
       setSelectedCards([]); 
   }
@@ -86,8 +81,10 @@ useEffect(()=>{
     setMatchedCards([]);
     setSelectedCards([]);
     setIsNoMatch([]);
-    setCounter(0);
     playGame();
+      
+    
+   
     
    }
   if (!isGamePlayed) {
@@ -95,21 +92,32 @@ useEffect(()=>{
   } 
 }
 // clear interval when counter reaches 0
-useEffect(() => {
-  if (counter === 0) {
-    clearInterval(counterInterval.current!);
-    counterInterval.current = null;
-  }
-}, [counter])
+// useEffect(() => {
+//   if (counter === 0 ) {
+//     clearInterval(counterInterval.current!);
+//     counterInterval.current = null;
+//   }
+// }, [counter,isGamePlayed])
 
    
 
 
   return (
-    <div  className='game-container '>
-      <h4 className='display-5 text-bg-danger '>The Skills Memory Game</h4>
-      <span className='counter fs-3 '>{isGameWon ? "Congratz! You Won!!" : counter > 0 ? counter : "Good luck!"}</span>
-      <div className='cards-container row gx-2 gy-2 '>
+    <div  className={'game-container ' + props.className}>
+      <h4 className='display-5 text-bg-danger p-3 '>The Skills Memory Game</h4>
+    
+      <span style={{height: "50px"}} 
+      className='counter fs-3 p-0 m-0 d-inline-block '>{isRestarting ? 
+      <HeadingAnimated className={"animate--normal"} Element='p'>
+         Shuffling the cards...
+      </HeadingAnimated> : !isGamePlayed ?
+       <HeadingTypeErase  Element='p' extraClasses="p-0 m-0 d-inline-block"
+      firstText='Welcome to the skills Memory Game!'
+      secondText='Press Start to begin game'/> : isGameWon ? <p >Congratz! You Won!! </p> 
+       : <HeadingAnimated Element='p' >
+          Good Luck!
+      </HeadingAnimated> }</span>
+      <Container className='cards-container mt-0 mb-5 m-auto  row gx-4  gy-4 '>
         {cards.map((card,index)=>{
             return(
              <GameCard onCardClick={()=> handleCardClick(card.name)}
@@ -120,16 +128,22 @@ useEffect(() => {
               matchFound={matchedCards.includes(card.name)}
               isNoMatch= {isNoMatch.length === 2}
               isGamePlayed={isGamePlayed}
-              notMatch={isNoMatch.includes(card.name)}/>
+              notMatch={isNoMatch.includes(card.name)}
+              RunIntro={intro}
+              
+              />
             )
         })}
-      </div>
-        
-        <Button onClick={handlePlayOrStop} 
-        className='mt-4 mx-1 px-3 ' 
+      </Container>
+       
+        <ButtonGroup className='mt-0' size='lg'>
+            <Button className='mx-2 rounded ' onClick={handlePlayOrStop} 
         variant={isGamePlayed ? "primary": "success"}
-         size='lg'>{isGameWon ? "Play Again" : isGamePlayed ? "Start Over" : "Start Game"}</Button>
-         <Button size='lg' variant='danger' className='mt-4 mx-1 '>Quit Game</Button>
+         >{isGameWon ? "Play Again" : isGamePlayed ? "Start Over" : "Start Game"}</Button>
+         <Button onClick={()=> props.onQuitGame()}  className='mx-2  rounded '  variant='danger'>Quit Game</Button>
+        </ButtonGroup>
+        
+      
     </div>
   )
 }

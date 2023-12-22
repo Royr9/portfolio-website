@@ -2,13 +2,13 @@
     background-color: $dark;
     color: white;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
     @media (max-width:767px){
       justify-content: flex-start;
-      
+      gap: 5%;
     }
     h2{font-size: 5rem; margin-top: 2rem;}
     .skills-container{

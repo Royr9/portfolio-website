@@ -2,11 +2,12 @@
 // font sizes / Headers 
 
 .section-heading{
-    font-size: $base-font-size * 5;
+     font-family: 'Poppins', sans-serif;
+    font-size: $base-font-size * 3;
    @include media-min("sm"){
-        font-size: $base-font-size * 6;
+        font-size: $base-font-size * 4;
     }
     @include media-min("md"){
-         font-size: $base-font-size * 7;
+         font-size: $base-font-size * 5;
     }
 }

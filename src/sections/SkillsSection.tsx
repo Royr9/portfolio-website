@@ -1,15 +1,24 @@
 import { Container } from "react-bootstrap";
-import skills from "../db/skillList"
+import skills, { skillsArrayType } from "../db/skillList"
 import SkillsGame from "../components/SkillsGame";
+import { useState } from "react";
 
 export default function SkillsSection() {
 
-const skillsList = skills();
 
+
+const [skillsList, setSkillList] = useState(skills());
+const [isGameOn, setIsGameOn] = useState(false);
+
+const handleGame = ()=>{
+setIsGameOn(false);
+}
 
   return (
     <section id="skills-section">
-        {/* <h2 className="section-heading">My Skills</h2>
+      {isGameOn ? <SkillsGame onQuitGame={handleGame}/> :  <div>
+        <h4 className='  display-5 text-bg-danger p-3  mt-0 '>My Development Skills</h4>
+        <button onClick={()=> setIsGameOn(true)} className="btn-primary btn">Wanna play a little game?</button>
         <Container fluid className="skills-container card-center royal-container ">
          
             {skillsList.map((skill,index)=> {
@@ -22,8 +31,8 @@ const skillsList = skills();
                     </div>
                 )
             })}
-         </Container> */}
-          <SkillsGame/>
+         </Container>
+          </div>}
     </section>
   )
 }
