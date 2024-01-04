@@ -1,20 +1,72 @@
 #skills-section{
-    background-color: $dark;
-    color: white;
+    
+   
     text-align: center;
     // display: flex;
     // flex-direction: column;
     // justify-content: center;
     // align-items: center;
-    @media (max-width:767px){
-      justify-content: flex-start;
-      gap: 5%;
-    }
+    // @media (max-width:767px){
+    //   justify-content: flex-start;
+    //   gap: 5%;
+    // }
     h2{font-size: 5rem; margin-top: 2rem;}
+    .title-col{
+      background-color: aliceblue;
+      .title-col-content{
+        background-color: aliceblue;
+        // content div from function 
+          > div{
+            p,h6{color: rgb(129, 174, 226);}
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          gap: 1rem;
+          min-height: 150px;
+          align-items: center;
+         
+          .play-quit-btn{
+            min-width: fit-content;
+            width: 95px;
+            margin: 0 0.5rem;
+          }
+
+        }
+        // color: rgb(13, 118, 238);
+      
+        // .icon-div{
+        //   position: relative;
+        // }
+        // .svg-container{
+        //     position: absolute;
+        //     height: 100%;
+        //     width: 100%;
+        //     background:transparent;
+        //     z-index: 2;
+        //     cursor: pointer;
+        //     &:hover{
+        //       svg{
+        //         color: red!important;
+        //       }
+        //     }
+        //   }
+        // svg{
+        //     position: relative;
+        //     z-index: 1;
+        //     }  
+  
+
+       
+         
+      }
+    }
+    .skills-col{ background-color: $dark;}
     .skills-container{
+     
       border: none;   
       display: flex;
       flex-wrap: wrap;
+      color: white;
      
       box-shadow: none;
       .skill-div{
@@ -26,7 +78,7 @@
         justify-content: center;
         gap: 5%;
         margin-left: 0; 
-        img{height: 65px; width: 65px;}
+        img{height: 60px; width: 60px;}
         span{width: 30%; text-align: left;}
       }  
       @media (max-width: 768px){

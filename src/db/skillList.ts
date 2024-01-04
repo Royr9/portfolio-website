@@ -43,7 +43,7 @@ return skillsList;
     let skillList: skillsArrayType = [];
     const gameSkillNames = skillNames;
 shuffleStringArray(gameSkillNames);
-gameSkillNames.slice(0,12).forEach((skill)=>{
+gameSkillNames.slice(0,10).forEach((skill)=>{
     skillList.push({
         name: skill,
         iconUrl: `/media/images/skill-icons/${skill}.png`

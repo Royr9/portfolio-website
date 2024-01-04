@@ -82,9 +82,9 @@
         
 
        return(
-         <div onClick={handleClick}  className='col-3 col-md-2   ' >
+         <div onClick={handleClick}  className='col-3 col-md-3   ' >
   
-          <div  
+          <div  style={{cursor: "pointer"}}
           className={` card-center  position-relative  p-0  d-flex   ${!isHidden ? "flipped" : "bg-gradient"}   m-auto  border-5 game-card
           ${props.matchFound ? "text-success border-success bg-success-subtle  ": props.notMatch && !isHidden ? "no-match": ""}`} >
             <img className={ `skill-icon align-self-center m-auto ${!isHidden ? "visible": ""}` }

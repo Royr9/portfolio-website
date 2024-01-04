@@ -147,7 +147,7 @@
 .anm-typing-container{
     display: inline-block;
     margin: 0 auto; 
-
+    position: rela
 }
 .anm-typing-container.he{
     direction: rtl;
@@ -160,7 +160,7 @@
     width: 0;
     animation-delay: 1s;
     animation: typing;
-    animation-duration: 1.5s;
+    animation-duration: 1s;
     animation-timing-function: steps(30, end);
     animation-fill-mode: both;
   }
@@ -222,10 +222,15 @@ animation-fill-mode: forwards;
     animation-duration: 1s;
 }
 
-
+.animate--repeat-2{
+    animation-iteration-count: 2;
+}
 
 .animate--infinite{
     animation-iteration-count: infinite;
+}
+.animate--fasterer{
+    animation-duration: 0.1!important;
 }
 .animate--faster{
     animation-duration: 0.4s;
