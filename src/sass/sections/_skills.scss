@@ -10,18 +10,21 @@
     //   justify-content: flex-start;
     //   gap: 5%;
     // }
-    h2{font-size: 5rem; margin-top: 2rem;}
+  
     .title-col{
       background-color: aliceblue;
       .title-col-content{
-        background-color: aliceblue;
+        
+        // #d1e7dd
         // content div from function 
           > div{
-            p,h6{color: rgb(129, 174, 226);}
+            p,h6{color:rgba(0, 0, 0, 0.571);}
+          max-width: 85%;
+          position: relative;
           display: flex;
           flex-direction: column;
           justify-content: space-around;
-          gap: 1rem;
+          gap: 5%;
           min-height: 150px;
           align-items: center;
          
@@ -32,70 +35,79 @@
           }
 
         }
-        // color: rgb(13, 118, 238);
-      
-        // .icon-div{
-        //   position: relative;
-        // }
-        // .svg-container{
-        //     position: absolute;
-        //     height: 100%;
-        //     width: 100%;
-        //     background:transparent;
-        //     z-index: 2;
-        //     cursor: pointer;
-        //     &:hover{
-        //       svg{
-        //         color: red!important;
-        //       }
-        //     }
-        //   }
-        // svg{
-        //     position: relative;
-        //     z-index: 1;
-        //     }  
-  
+     
 
-       
-         
       }
     }
     .skills-col{ background-color: $dark;}
     .skills-container{
-     
+      border-radius: 0;
+      background-color: $dark;
       border: none;   
       display: flex;
       flex-wrap: wrap;
-      color: white;
-     
+      color: rgb(255, 255, 255);
+     @include media-max("lg"){
+      color: black;
+      background-color: aliceblue!important;
+     }
       box-shadow: none;
       .skill-div{
         margin: 2% auto;
         width: 70%;
+        
         position: relative;
         display: inline-flex;
         align-items: center;
         justify-content: center;
         gap: 5%;
         margin-left: 0; 
+        
         img{height: 60px; width: 60px;}
-        span{width: 30%; text-align: left;}
+        span{
+          width: 42%; 
+          
+          text-align: left;
+          white-space: nowrap;
+        }
       }  
       @media (max-width: 768px){
         .skill-div{
            margin: 2% auto;
           img{height: 55px; width:55px;}
-          span{font-size: small;}
+          span{font-size: small; width: 50%;}
         }
       }
       @media (max-width: 576px) {
         .skill-div{
-          margin: 15% auto;
+          min-width: fit-content;
+          margin: 10% auto;
           img{height: 6vw; width: 6vw;}
-          span{font-size: smaller;}
+          span{font-size: smaller;width: 60px;}
         }
       }
       
     }
 }
 
+// mobile alignment
+
+
+.skill-section-grid{
+  @include media-max("lg"){
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: auto;
+  .title-col{
+    grid-row: 3/3;
+    display: block;
+  }
+  .game-controls-col{
+    grid-row: 2/2;
+    background-color: $dark!important;
+  }
+  .title-col-content-game{
+    p,h6,span{color: white!important;}
+  }
+  }
+}

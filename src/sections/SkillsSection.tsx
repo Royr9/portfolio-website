@@ -1,4 +1,4 @@
-import { Button, Container, Nav } from "react-bootstrap";
+import { Button, Container, Nav, NavLink, Navbar } from "react-bootstrap";
 import skills, { skillsArrayType } from "../db/skillList"
 import SkillsGame from "../components/SkillsGame";
 import { useEffect, useState } from "react";
@@ -108,9 +108,9 @@ function renderGameText() {
   // before game
   if (!gameState.isGameOn) {
     return <div>
-    <p className="display-6 ">Want to play a little memory game? </p>
-    <IconButton  color="primary"  onClick={()=> handleGame("isGameOn")}>
-      <PlayCircle fontSize="large" sx={{fontSize: 60, "&:hover" :{ color: "rgb(13, 118, 238)"}}}/>
+    <p className="display-6 ">Want to test your memory? </p>
+    <IconButton    onClick={()=> handleGame("isGameOn")}>
+      <PlayCircle fontSize="large" sx={{fontSize: 70, "&:hover" :{ color: "black"}}}/>
     </IconButton>
           {/* <div  className="icon-div"  >
             <div id="isGameOn" onClick={handleGame} className="svg-container"></div>
@@ -144,17 +144,18 @@ function renderGameText() {
     </div>
     // game won
   }else if (gameState.isGameWon) {
-    return <div>
-      <p  className="display-6 text-success ">You Won! <br />
-      Moves made: <span className="text-dark">{gameState.moveCounter}</span> <br />
-      Your High Score: <span className="text-dark">{userHighScore}</span> <br />
-      Want to play again?</p>
+    return <div className="d-block ">
+      <p className=" mt-0 p-0   display-6 text-success ">You Won!</p> 
+      <span>Moves Made: <b>{gameState.moveCounter}</b></span> <br />
+      <span>Your High Score: <b>{userHighScore}</b></span><br />
+      <span className="fs-5">Want to play again?</span>
+      
     <div  className="game-controls w-100 m-auto  "> 
-            <IconButton size="large" className="mx-2 " onClick={()=> handleGame("isGameRestarting")}>
+            <IconButton color="warning" size="large" className="mx-2 " onClick={()=> handleGame("isGameRestarting")}>
               <ReplayRoundedIcon   sx={{color: "white",fontSize: 52,borderRadius: "50%", backgroundColor: "black"}}/>
               </IconButton> 
             
-            <IconButton  className="mx-2 " onClick={()=> handleGame("isGameOn")}>
+            <IconButton color="error"  className="mx-2 " onClick={()=> handleGame("isGameOn")}>
               <CancelRoundedIcon color="error" sx={{fontSize: 60}}/>
              </IconButton>
             </div> 
@@ -164,11 +165,11 @@ function renderGameText() {
     return <div>
       <HeadingAnimated className={"display-6 animate--normal "} Element="h6">Good Luck!!</HeadingAnimated> 
     <div  className="game-controls w-100 m-auto  "> 
-            <IconButton size="large" className="mx-2 " onClick={()=> handleGame("isGameRestarting")}>
+            <IconButton color="warning" size="large" className="mx-2 " onClick={()=> handleGame("isGameRestarting")}>
               <ReplayRoundedIcon   sx={{color: "white",fontSize: 52,borderRadius: "50%", backgroundColor: "black"}}/>
               </IconButton> 
             
-            <IconButton  className="mx-2 " onClick={()=> handleGame("isGameOn")}>
+            <IconButton color="error" className="mx-2 " onClick={()=> handleGame("isGameOn")}>
               <CancelRoundedIcon color="error" sx={{fontSize: 60}}/>
              </IconButton>
             </div> 
@@ -187,24 +188,30 @@ function addToCounter() {
 
   return (
     <section id="skills-section">
-      <Container fluid className="row w-100 h-100 p-0  m-0  ">
-     <div  className="title-col col-sm-4 d-flex flex-column justify-content-center  ">
-      <div className="title-col-content d-flex 
-       flex-column justify-content-center h-50 my-lg-2 gap-5  align-items-center">
-         <h4 className="display-2  ">My Skills</h4>
+      <Container fluid className="skill-section-grid row w-100 h-100 p-0  m-0  ">
+      {!gameState.isGameOn && <div style={{backgroundColor: "aliceblue"}} className=" d-lg-none  p-0 m-0 d-flex 
+        justify-content-center align-items-center    ">
+         <h4 className="display-2  fw-bold  m-0 ">My Skills</h4>
+      </div>}
+     
+     <div  className={`title-col ${gameState.isGameOn && "game-controls-col"} col-lg-4 d-flex flex-column justify-content-center `}>
+      <div className={`d-flex  flex-column align-items-center ${!gameState.isGameOn
+       ? "title-col-content  justify-content-center  h-50 my-lg-2 gap-lg-5  "
+       : "title-col-content title-col-content-game" }`}>
+         <h4 className="display-2 d-none d-lg-block   ">My Skills</h4>
          
          {renderGameText()}
       </div>
        
       </div>
-      <div className=" col-sm-8   skills-col p-0  ">
+      <div className=" col-lg-8 border-0  skills-col p-0  ">
         {gameState.isGameOn ? <SkillsGame moveCounter={addToCounter} playGame={gameState.isGamePlayed} gameWon={handleGameWon}/> : 
-        <div className="skills-container h-100  card-center">
+        <div className="skills-container h-100 card-center border-0  py-0 ">
               {skillsList.map((skill,index)=> {
                 return (
                     <div className={` col-4  skill-${index}`} key={index}>
                       <div className="skill-div">
-                    <img src={skill.iconUrl} alt="" /> <span className="  ">{skill.name}</span>
+                    <img src={skill.iconUrl} alt="" /> <span className={`skill-${skill.name}`}>{skill.name}</span>
                       </div>
                         
                     </div>

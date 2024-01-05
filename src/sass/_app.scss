@@ -1,14 +1,18 @@
 
-html{
+section{
+    height: 100vh;
+        max-height: 100vh;
+        overflow: hidden;
+}
+
+@include media-min("sm"){
+    html{
     scroll-snap-type: y mandatory!important;
 }
 
    section{
-        height: 100vh;
-        max-height: 100vh;
-        overflow: hidden;
-        min-height: fit-content!important;
         scroll-behavior: smooth;
         scroll-snap-align: start;
-        border: black solid 1px;
+        
     }
+}

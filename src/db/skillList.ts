@@ -14,7 +14,7 @@
 
 
 
-export const skillNames= ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Bootstrap", "Sass","Tailwind", "jQuery","Node.js" ,"MongoDB", "Git", "GitHub", "Rest API",  "ICP"]; 
+export const skillNames= ["HTML", "CSS","Bootstrap", "Sass","Tailwind", "JavaScript","jQuery", "React", "TypeScript","Git", "GitHub","Node.js" ,"MongoDB", "ICP","Rest API" ]; 
 
 
 
@@ -43,7 +43,7 @@ return skillsList;
     let skillList: skillsArrayType = [];
     const gameSkillNames = skillNames;
 shuffleStringArray(gameSkillNames);
-gameSkillNames.slice(0,10).forEach((skill)=>{
+gameSkillNames.slice(0,8).forEach((skill)=>{
     skillList.push({
         name: skill,
         iconUrl: `/media/images/skill-icons/${skill}.png`
