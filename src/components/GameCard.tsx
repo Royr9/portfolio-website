@@ -10,6 +10,7 @@
     matchFound: boolean;
     notMatch: boolean;
     RunIntro: boolean;
+    isGameRestarting: boolean;
     
  }
 
@@ -78,13 +79,11 @@
 
    
 
-      
-        
 
        return(
          <div onClick={handleClick}  className='col-3 col-md-3   ' >
   
-          <div  style={{cursor: "pointer"}}
+          <div  style={{cursor: props.isGameRestarting ? "auto" : props.isGamePlayed && isHidden ? "pointer" : "auto" }}
           className={` card-center  position-relative  p-0  d-flex   ${!isHidden ? "flipped" : "bg-gradient"}   m-auto  border-5 game-card
           ${props.matchFound ? "text-success border-success bg-success-subtle  ": props.notMatch && !isHidden ? "no-match": ""}`} >
             <img className={ `skill-icon align-self-center m-auto ${!isHidden ? "visible": ""}` }

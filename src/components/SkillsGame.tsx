@@ -118,7 +118,7 @@ useEffect(()=>{
 
 
   return (
-    <div  className={'game-container position-relative  ' + props.className}>
+    <div  className={'game-container position-relative w-100  ' + props.className}>
       <h4 onClick={handlePlayOrStop} className='display-5 text-bg-danger p-3 '>The Skills Memory Game</h4>
     
       <Container className='cards-container   mt-0 mb-5 m-auto  row gx-4  gy-4 '>
@@ -134,6 +134,7 @@ useEffect(()=>{
               isGamePlayed={isGamePlayed}
               notMatch={isNoMatch.includes(card.name)}
               RunIntro={intro}
+              isGameRestarting={isRestarting}
               
               />
             )

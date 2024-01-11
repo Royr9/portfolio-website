@@ -1,24 +1,46 @@
 #skills-section{
+text-align: center;
+.skills-section-game-is-on{
+  background-color: $dark!important;
+}
+
+.skill-section-grid{
+  @include media-max("lg"){
     
-   
-    text-align: center;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
-    // @media (max-width:767px){
-    //   justify-content: flex-start;
-    //   gap: 5%;
-    // }
-  
+  display: grid;
+  // gap: 8%;
+  grid-template-columns: 1;
+  grid-template-rows: 0.25fr 1fr 1fr;
+  background-color: aliceblue;
+  .title-col{
+    grid-row: 3/3;
+    display: block;
+    justify-content: flex-start;
+  }
+  .skills-col{
+    background-color: aliceblue;
+    height: fit-content;
+  }
+  .skills-col-game-on{
+      background-color: $dark!important;
+    }
+  .game-controls-col{
+    grid-row: 2/2;
+    background-color: $dark!important;
+  }
+  .title-col-content-game{
+    p,h6,span{color: white!important;}
+  }
+  }
+}
+
     .title-col{
       background-color: aliceblue;
+    justify-content: center;
       .title-col-content{
-        
-        // #d1e7dd
         // content div from function 
           > div{
-            p,h6{color:rgba(0, 0, 0, 0.571);}
+            p,h6{color:rgba(0, 0, 0, 0.746);}
           max-width: 85%;
           position: relative;
           display: flex;
@@ -27,7 +49,12 @@
           gap: 5%;
           min-height: 150px;
           align-items: center;
-         
+            .play-icon{
+              font-size: 40px!important;
+              @include media-min("lg"){
+                font-size: 70px!important;
+              }
+            }
           .play-quit-btn{
             min-width: fit-content;
             width: 95px;
@@ -39,23 +66,29 @@
 
       }
     }
-    .skills-col{ background-color: $dark;}
+    .skills-col{ 
+      background-color: $dark;
+      display: flex;
+      align-items: center;
+    }
     .skills-container{
       border-radius: 0;
       background-color: $dark;
       border: none;   
       display: flex;
+
+      margin: 0 auto;
       flex-wrap: wrap;
       color: rgb(255, 255, 255);
+      box-shadow: none;
      @include media-max("lg"){
       color: black;
       background-color: aliceblue!important;
      }
-      box-shadow: none;
+      
       .skill-div{
-        margin: 2% auto;
+    
         width: 70%;
-        
         position: relative;
         display: inline-flex;
         align-items: center;
@@ -70,18 +103,24 @@
           text-align: left;
           white-space: nowrap;
         }
+        @include media-max("lg"){
+        img{height: 5vw; width: 5vw;}
+      }
       }  
+      
       @media (max-width: 768px){
         .skill-div{
-           margin: 2% auto;
-          img{height: 55px; width:55px;}
+          margin: 0 auto;
+          margin-bottom: 2%;
+           
+        
           span{font-size: small; width: 50%;}
         }
       }
       @media (max-width: 576px) {
         .skill-div{
           min-width: fit-content;
-          margin: 10% auto;
+          margin: 2% auto;
           img{height: 6vw; width: 6vw;}
           span{font-size: smaller;width: 60px;}
         }
@@ -93,21 +132,3 @@
 // mobile alignment
 
 
-.skill-section-grid{
-  @include media-max("lg"){
-  display: grid;
-  grid-template-columns: 1;
-  grid-template-rows: auto;
-  .title-col{
-    grid-row: 3/3;
-    display: block;
-  }
-  .game-controls-col{
-    grid-row: 2/2;
-    background-color: $dark!important;
-  }
-  .title-col-content-game{
-    p,h6,span{color: white!important;}
-  }
-  }
-}

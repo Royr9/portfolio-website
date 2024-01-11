@@ -136,18 +136,16 @@
 
 
 @keyframes typing {
-    from{
-        width: 0;
-    }
-    to{
-        width: 100%;
-    }
+    0%{width: 0;}
+    
+    100%{width: 100%;}
 }
 
 .anm-typing-container{
     display: inline-block;
     margin: 0 auto; 
-    position: rela
+    position: rela;
+    
 }
 .anm-typing-container.he{
     direction: rtl;
