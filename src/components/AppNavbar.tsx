@@ -6,10 +6,10 @@ import  Offcanvas  from 'react-bootstrap/Offcanvas';
 
 function AppNavbar() {
   return (
-      <Navbar className='drawer-navbar'  expand="md">
+      <Navbar variant='dark' className='drawer-navbar'  expand="md">
           <Container fluid >
           
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-false`} />
+            <Navbar.Toggle color='white' aria-controls={`offcanvasNavbar-expand-false`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-false`}
               aria-labelledby={`offcanvasNavbarLabel-expand-false`}
@@ -21,7 +21,7 @@ function AppNavbar() {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="justify-content-start flex-grow-1 pe-3 ">
+                <Nav className="justify-content-center flex-grow-1 pe-3 ">
                   <Nav.Link href="#hero-section">Home</Nav.Link>
                   <Nav.Link href="#project">Projects</Nav.Link>
                   <Nav.Link href="#about">About</Nav.Link>

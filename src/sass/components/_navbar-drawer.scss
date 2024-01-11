@@ -1,5 +1,8 @@
 .drawer-navbar{
-    background-image: $navbar-image;
+    // background-image: $navbar-image;
+    .nav-link{
+        color: white!important;
+    }
     background-repeat: no-repeat;
     width: 100%;
     position: absolute!important;
@@ -21,9 +24,7 @@ background-size: contain;
 }
 
 .navbar-toggler{
-    border: black 1px solid;
     font-size: small;
- 
 }
 
 
@@ -50,7 +51,7 @@ background-size: contain;
 
 @media screen and (min-width: 768px) {
     .nav-link{
-        color: black!important;
+        
         padding: 8px;
     }
         .navbar-nav {

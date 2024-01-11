@@ -20,12 +20,12 @@ export default function App() {
     
 
    
-      {/* <AppNavbar/>
-      <HeroSection  ref={section1Ref} />
-      <AboutSection ref={section2Ref} /> */}
+      <AppNavbar/>
+      <HeroSection  />
+      {/* <AboutSection  />
       <SkillsSection/>
-      {/* <ProjectsSection/> */}
-   
+      <ProjectsSection/>
+    */}
 
     </div>
   );
