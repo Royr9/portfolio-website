@@ -1,10 +1,11 @@
 #hero-section{
-   
+    background-color: $heroSection-background;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
   
 }
 .bg-image{
@@ -13,14 +14,33 @@
     position: absolute;
     object-fit: cover;
     object-position: left;
-    z-index: -1;
+    z-index: 2;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
 }
+.second-img{
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    object-fit: cover;
+    // object-position: left;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+ 
+   
+    @include media-max("lg"){
+    opacity: 0.5!important;
+    }
+}
 
 .hero-section-container{
+    position: relative;
+    z-index: 3;
     display: flex;
     height: 100%;
     width: 100%;
@@ -39,22 +59,24 @@
 
 /* typing animation align to left */
 
-.hero-title h1 {
-    font-size: 7rem;
+.hero-title h1{
+    font-family: $font-primary;
+    white-space: wrap!important;
+    font-weight: 400;
+    font-size: 100px;
+    @include media-max("md"){
+        font-size: 15vw;
+    }
 }
 
-
-.hero-title h2{
-    font-size: 4rem;
-    text-shadow: 0 0 10px white;
+.hero-title h3{
+    font-family: $font-secondary;
     max-width: 95vw;
-
+       @include media-max("sm"){
+        font-size:6vw ;
+    }
 }
 
-.hero-title h4{
-    font-size: 1.8rem;
-    max-width: 85vw;
-}
 
 .title-buttons > button, .title-buttons a{
     min-width: fit-content;
@@ -67,21 +89,3 @@
 
 /* mobile */
 
-@media screen and (max-width: 970px) {
-    .hero-title{
-     h1 {
-        font-size: 5.5rem;
-        white-space: nowrap;
-    }
-
-    h2 {
-        font-size: 6vw;
-        text-shadow: 0 0 5px white;
-    }
-
-    h4 {
-        font-size: 5vw;
-    }
-    }
-    
-}

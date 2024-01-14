@@ -21,7 +21,7 @@ function AppNavbar() {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="justify-content-center flex-grow-1 pe-3 ">
+                <Nav className="justify-content-center w-100  flex-grow-1 pe-3 ">
                   <Nav.Link href="#hero-section">Home</Nav.Link>
                   <Nav.Link href="#project">Projects</Nav.Link>
                   <Nav.Link href="#about">About</Nav.Link>

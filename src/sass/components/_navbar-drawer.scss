@@ -1,4 +1,6 @@
 .drawer-navbar{
+    position: relative;
+    z-index: 10;
     // background-image: $navbar-image;
     .nav-link{
         color: white!important;
@@ -8,7 +10,7 @@
     position: absolute!important;
     top: 0;
 @media (min-width: 1500px){
-    width: 40vw!important;
+   
     background-size: cover;
     .nav-link{
         margin: auto 0.5rem;

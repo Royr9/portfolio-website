@@ -6,6 +6,21 @@ $dark: #153243;
 $mint:  #86F8FC;
 $gyz: #5E7699;
 
+
+$heroSection-background: #13072E ;
+$navbar-image-color: #0393A3;
+$navbar-image: url("../../../public/media/images/navbar_stripes-blue.png");
+$secondary-background-color: #153243;
+$glowing-button-color: #0393A3;
+$profile-container-bg-color: #0F7784;
+
+
+// Fonts 
+$font-primary: 'Poppins', sans-serif;
+$font-secondary: "Open Sans", sans-serif;
+
+
+
 // gradients
 $linear-right-primary: linear-gradient(to right,aliceblue,#407695);
 $linear-secondary: linear-gradient(90deg,white, $secondary );  
@@ -29,12 +44,5 @@ $font-size-sm: $base-font-size * 0.75 !default;
 $font-size-lg: $base-font-size * 1.5 !default;
 $font-size-xl: $base-font-size * 2 !default;
 $font-size-xxl: $base-font-size * 3 !default;
-
-$navbar-image-color: #0393A3;
-$navbar-image: url("../../../public/media/images/navbar_stripes-blue.png");
-$secondary-background-color: #153243;
-$glowing-button-color: #0393A3;
-$profile-container-bg-color: #0F7784;
-$heroSection-background: url("../../public/media/images/title-bg.png");
 
 
