@@ -20,21 +20,22 @@ import HeroSection from './sections/HeroSection';
 import AboutSection from './sections/AboutSection';
 import SkillsSection from './sections/SkillsSection';
 import ProjectsSection from './sections/ProjectsSection';
-
+import BtnWithArrow from "./library/library_components/button-components/BtnWithArrow";
 export default function App() {
 
 
   return (
-    <div className='App' >
+    <div  className='App position-relative ' >
     
 
    
       <AppNavbar/>
       <HeroSection  />
-      {/* <AboutSection  />
-      <SkillsSection/>
-      <ProjectsSection/>
-    */}
+      <AboutSection  />
+     
+      {/* <SkillsSection/> */}
+      {/* <ProjectsSection/> */}
+   
 
     </div>
   );

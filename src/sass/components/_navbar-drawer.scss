@@ -1,5 +1,5 @@
 .drawer-navbar{
-    position: relative;
+    position: fixed;
     z-index: 10;
     // background-image: $navbar-image;
     .nav-link{
@@ -7,11 +7,9 @@
     }
     background-repeat: no-repeat;
     width: 100%;
-    position: absolute!important;
+   
     top: 0;
 @media (min-width: 1500px){
-   
-    background-size: cover;
     .nav-link{
         margin: auto 0.5rem;
     }
@@ -19,9 +17,6 @@
 }
 
 @media screen and (max-width:767px) {
-    .drawer-navbar{
-background-size: contain;
-    }
     
 }
 
